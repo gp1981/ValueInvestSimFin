@@ -50,3 +50,6 @@ print("\nDataFrame Head:")
 print(df1.head())
 
 # Display subset of data
+print(df1.columns)
+selected_columns = ['Ticker','Fiscal Year','Fiscal Period','Operating Income (Loss)']
+df1[selected_columns]
