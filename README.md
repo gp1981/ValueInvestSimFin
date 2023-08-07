@@ -25,8 +25,10 @@ To use the code in this repository, you will need an API key from Simfin. The AP
 | File                   | Purpose                                |
 |------------------------|----------------------------------------|
 | `main.py`               | Main script to run the analysis        |
-| `Functions/utils.py`    | Utility functions                      |
-| `Functions/analysis.py` | Analysis functions for stock ranking   |
+| `utils.py`              | Utility functions                      |
+| `analysis.py`           | Analysis functions for stock ranking   |
+| `tutorial.py`           | Tutorial based on [SimFin GitHub Tutorial](https://github.com/SimFin/simfin-tutorials/blob/master/01_Basics.ipynb)|
+| `Tutorial_Jupyter.ipynb`| Same tutorial in Jupyter [SimFin GitHub Tutorial](https://github.com/SimFin/simfin-tutorials/blob/master/01_Basics.ipynb)|
 
 ## Contributing
 
