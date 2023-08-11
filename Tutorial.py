@@ -13,7 +13,7 @@ from tqdm import tqdm
 
 # Load API key from .env file in the root directory
 load_dotenv()
-API_KEY = os.environ.get('API_KEY')
+API_KEY = os.environ.get('API_SIMFIN')
 
 # 8) continue with the tutorial https://github.com/SimFin/simfin-tutorials/blob/master/01_Basics.ipynb
 
