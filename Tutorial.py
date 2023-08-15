@@ -68,3 +68,15 @@ df2.loc['MSFT'][selected_columns2]
 
 # Plot
 df2.loc['MSFT'][OPERATING_INCOME].plot(grid = True)
+
+#  Load special function (financial statements)
+df_income = sf.load_income(variant='ttm', market='us')
+print(df_income.head())
+
+df_balance = sf.load_balance(variant='ttm', market='us')
+print(df_balance.columns)
+print(df_balance.head())
+
+df_cashflow = sf.load_cashflow(variant='ttm', market='us')
+print(df_cashflow.columns)
+print(df_cashflow.head())
