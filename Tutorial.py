@@ -11,6 +11,7 @@ import os
 from dotenv import load_dotenv
 from tqdm import tqdm
 
+
 # Load API key from .env file in the root directory
 load_dotenv()
 API_KEY = os.environ.get('API_SIMFIN')
@@ -88,3 +89,30 @@ print(df_cashflow.head())
 df_income2 = sf.load_income(variant='ttm', market='us',
                             index=[TICKER, PUBLISH_DATE])
 print(df_income2.head())
+
+
+# Offset REPORT_DATE by 90 days
+df_income3 = sf.add_date_offset(df=df_income,
+                                date_index=REPORT_DATE,
+                                offset=pd.DateOffset(days=90))
+print(df_income3.head())
+
+# Load latest price
+df_prices_latest = sf.load_shareprices(variant='latest', market='us')
+df_prices_latest.head()
+
+# Load companies info
+df_companies = sf.load_companies(index=TICKER, market='us')
+print(df_companies.head())
+
+# Load sector and industries
+df_industries = sf.load_industries()
+print(df_industries.head())
+industry_id = df_companies.loc['MSFT'][INDUSTRY_ID]
+df_industries.loc[industry_id]
+
+# Dataset and columns name
+sf.info_datasets()
+sf.info_datasets('companies')
+sf.info_columns(COMPANY_NAME)
+sf.info_columns('shares')
