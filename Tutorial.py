@@ -80,3 +80,11 @@ print(df_balance.head())
 df_cashflow = sf.load_cashflow(variant='ttm', market='us')
 print(df_cashflow.columns)
 print(df_cashflow.head())
+
+# Report Date vs. Publish Date vs. Restated Date
+
+# By default the functions sf.load_income(), sf.load_balance() and sf.load_cashflow() use the Report Date as an index, but it can be switched to use the Publish Date instead, by setting the index argument. We give a list of the indices we want in the resulting DataFrame, in this case we want both the Ticker and Publish Date.
+
+df_income2 = sf.load_income(variant='ttm', market='us',
+                            index=[TICKER, PUBLISH_DATE])
+print(df_income2.head())
