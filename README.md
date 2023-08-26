@@ -1,3 +1,6 @@
+## Repository Archived (Aug. 2023)
+The data are limited to ~5000 stocks in US only. Also the download of the data with SimFin libary does not include the most recent quarters
+
 # ValueInvestSimFin
 This library provides functionality to analyze financial data and rank companies based on the principles outlined in the book "The Little Book that Still Beats the Market" by Joel Greenblatt.
 Author: gp1981 with the contribution of ChatGPT4.0
